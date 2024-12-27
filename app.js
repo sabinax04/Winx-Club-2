@@ -113,7 +113,7 @@ function fetchMovies() {
   if (isLoading) return;
   isLoading = true;
 
-  const searchUrl = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchQuery}&page=${currentPage}`;
+  const searchUrl = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchQuery}&page=${currentPage}`;
   const loadingElement = document.getElementById("loading");
 
   loadingElement.style.display = "block";
@@ -137,19 +137,16 @@ function fetchMovies() {
             <button class="get-movie-btn">Go to the movie</button>
           `;
 
-         
           movieItem.style.border = ".5px solid #ec008c";
           movieItem.style.padding = "1rem";
           movieItem.style.margin = "1rem";
           movieItem.style.textAlign = "center";
 
-          
           const getMovieButton = movieItem.querySelector(".get-movie-btn");
           getMovieButton.addEventListener("click", () => {
             window.open(`https://www.imdb.com/title/${movie.imdbID}`, "_blank");
           });
 
-          
           moviesList.appendChild(movieItem);
         });
 
