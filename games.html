@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Winx club</title>
+  </head>
+  <body>
+    <head>
+      <nav>
+        <div>
+          <a href="#home">
+            <img
+              src="./img_marchio.png"
+              alt="winx_club_logo"
+              class="winx-logo"
+            />
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <div class="nav-flex">
+            <a href="./index.html">About</a>
+            <img src="./stellapng.png" alt="stella_png" class="nav-png" />
+          </div>
+
+          <div class="nav-flex">
+            <a href="./personajlar.html">Characters</a>
+            <img src="./musapng.png" alt="musa_png" class="nav-png" />
+          </div>
+
+          <div class="nav-flex">
+            <a href="./games.html">Games</a>
+            <img src="./florapng.png" alt="flora_png" class="nav-png" />
+          </div>
+
+          <div class="nav-flex">
+            <a href="./films.html">Films </a>
+            <img src="./pngegg.png" alt="bloom_sign_in" class="nav-png" />
+          </div>
+        </div>
+      </nav>
+    </head>
+
+    <main>
+      <div id="intro">
+        <h1 style="font-size: 3rem; color: #ec008c">
+          Do you want to know which Winx Club fairy are you?
+        </h1>
+        <button onclick="startQuiz()" class="introButton">
+          Click the button and start
+        </button>
+      </div>
+
+      <div class="quiz-container">
+        <form id="quiz-form">
+          <div class="question" id="question1">
+            <p>Question 1: Which element do you like the most ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Bloom,', this)"
+              class="selectButton"
+            >
+              Fire
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Flora', this)"
+              class="selectButton"
+            >
+              Nature
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Stella', this)"
+              class="selectButton"
+            >
+              Sun
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Musa', this)"
+              class="selectButton"
+            >
+              Music
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Tecna',  this)"
+              class="selectButton"
+            >
+              Technology
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question1', 'Aisha', this)"
+              class="selectButton"
+            >
+              Waves
+            </button>
+          </div>
+
+          <div class="question" id="question2" style="display: none">
+            <p>Question 2: What is your favorite color ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question2', 'Bloom', this)"
+              class="selectButton"
+            >
+              Red
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question2', 'Flora', this)"
+              class="selectButton"
+            >
+              Green
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question2', 'Stella', this)"
+              class="selectButton"
+            >
+              Yellow
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question2', 'Musa', this)"
+              class="selectButton"
+            >
+              Blue
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question2', 'Tecna', this)"
+              class="selectButton"
+            >
+              Purple
+            </button>
+          </div>
+
+          <div class="question" id="question3" style="display: none">
+            <p>Question 3: Which activity interests you the most ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question3', 'Bloom', this)"
+              class="selectButton"
+            >
+              Adventure
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question3', 'Flora', this)"
+              class="selectButton"
+            >
+              Gardening
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question3', 'Stella', this)"
+              class="selectButton"
+            >
+              Shopping
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question3', 'Musa', this)"
+              class="selectButton"
+            >
+              Listening to music
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question3', 'Tecna', this)"
+              class="selectButton"
+            >
+              Coding
+            </button>
+          </div>
+
+          <div class="question" id="question4" style="display: none">
+            <p>Question 4: Which animal do you like the most ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question4', 'Bloom', this)"
+              class="selectButton"
+            >
+              Lion
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question4', 'Flora', this)"
+              class="selectButton"
+            >
+              Butterfly
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question4', 'Stella', this)"
+              class="selectButton"
+            >
+              Bird
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question4', 'Musa', this)"
+              class="selectButton"
+            >
+              Fish
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question4', 'Tecna', this)"
+              class="selectButton"
+            >
+              Cat
+            </button>
+          </div>
+
+          <div class="question" id="question5" style="display: none">
+            <p>Question 5: What is your favorite music genre ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question5', 'Bloom', this)"
+              class="selectButton"
+            >
+              Pop
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question5', 'Flora', this)"
+              class="selectButton"
+            >
+              Classical
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question5', 'Stella', this)"
+              class="selectButton"
+            >
+              Dance
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question5', 'Musa', this)"
+              class="selectButton"
+            >
+              Rock
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question5', 'Tecna', this)"
+              class="selectButton"
+            >
+              Electronic
+            </button>
+          </div>
+
+          <div class="question" id="question6" style="display: none">
+            <p>Question 6: What quality do you value the most in your life ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question6', 'Bloom', this)"
+              class="selectButton"
+            >
+              Leadership
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question6', 'Flora', this)"
+              class="selectButton"
+            >
+              Kindness
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question6', 'Stella', this)"
+              class="selectButton"
+            >
+              Creativity
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question6', 'Musa', this)"
+              class="selectButton"
+            >
+              Sensitivity
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question6', 'Tecna', this)"
+              class="selectButton"
+            >
+              Logic
+            </button>
+          </div>
+
+          <div class="question" id="question7" style="display: none">
+            <p>Question 7: Where do you dream of traveling ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question7', 'Bloom', this)"
+              class="selectButton"
+            >
+              Volcano
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question7', 'Flora', this)"
+              class="selectButton"
+            >
+              Tropical forests
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question7', 'Stella', this)"
+              class="selectButton"
+            >
+              Beaches
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question7', 'Musa', this)"
+              class="selectButton"
+            >
+              Seas
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question7', 'Tecna', this)"
+              class="selectButton"
+            >
+              Futuristic cities
+            </button>
+          </div>
+
+          <div class="question" id="question8" style="display: none">
+            <p>Question 8: Which season do you prefer ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question8', 'Bloom', this)"
+              class="selectButton"
+            >
+              Summer
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question8', 'Flora', this)"
+              class="selectButton"
+            >
+              Spring
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question8', 'Stella', this)"
+              class="selectButton"
+            >
+              Early summer
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question8', 'Musa', this)"
+              class="selectButton"
+            >
+              Autumn
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question8', 'Tecna', this)"
+              class="selectButton"
+            >
+              Winter
+            </button>
+          </div>
+
+          <div class="question" id="question9" style="display: none">
+            <p>Question 9: How would your friends describe you ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question9', 'Bloom', this)"
+              class="selectButton"
+            >
+              Brave
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question9', 'Flora', this)"
+              class="selectButton"
+            >
+              Kind
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question9', 'Stella', this)"
+              class="selectButton"
+            >
+              Cheerful
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question9', 'Musa', this)"
+              class="selectButton"
+            >
+              Emotional
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question9', 'Tecna', this)"
+              class="selectButton"
+            >
+              Intelligent
+            </button>
+          </div>
+
+          <div class="question" id="question10" style="display: none">
+            <p>Question 10: What magical power would you like to have ?</p>
+            <button
+              type="button"
+              onclick="selectAnswer('question10', 'Bloom', this)"
+              class="selectButton"
+            >
+              Create fire
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question10', 'Flora', this)"
+              class="selectButton"
+            >
+              Grow plants
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question10', 'Stella', this)"
+              class="selectButton"
+            >
+              Spread light
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question10', 'Musa', this)"
+              class="selectButton"
+            >
+              Heal with music
+            </button>
+            <button
+              type="button"
+              onclick="selectAnswer('question10', 'Tecna', this)"
+              class="selectButton"
+            >
+              Control technology
+            </button>
+          </div>
+
+          <div class="navigation">
+            <button
+              type="button"
+              onclick="previousQuestion()"
+              class="previous-next-button"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              onclick="nextQuestion()"
+              class="previous-next-button"
+            >
+              Next
+            </button>
+          </div>
+
+          <p id="result"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="common">
+        <div class="footer-first-part">
+          <a
+            href="https://www.winxclub.com/en/faq?_gl=1*1d259b4*_up*MQ.._ga*Mzg1ODU0NTYwLjE3MzUyODYxNDY._ga_DNH1XZMLZY*MTczNTI4NjE0Ni4xLjAuMTczNTI4NjE0Ni4wLjAuMA.."
+            >FAQ</a
+          >
+          <a
+            href="https://www.winxclub.com/en/contact-us?_gl=1*ldvv7p*_up*MQ.._ga*Mzg1ODU0NTYwLjE3MzUyODYxNDY._ga_DNH1XZMLZY*MTczNTI4NjE0Ni4xLjEuMTczNTI4NjE1MC4wLjAuMA.."
+            >Contact Us</a
+          >
+          <a
+            href="https://www.winxclub.com/en/privacy-policy?_gl=1*m9h1p2*_up*MQ.._ga*Mzg1ODU0NTYwLjE3MzUyODYxNDY._ga_DNH1XZMLZY*MTczNTI4NjE0Ni4xLjEuMTczNTI4NjE4MC4wLjAuMA.."
+            >Privacy Policy</a
+          >
+          <a
+            href="https://www.winxclub.com/en/cookie-policy?_gl=1*1stdlvk*_up*MQ.._ga*Mzg1ODU0NTYwLjE3MzUyODYxNDY._ga_DNH1XZMLZY*MTczNTI4NjE0Ni4xLjEuMTczNTI4NjE5Mi4wLjAuMA.."
+            >Cookie Policy</a
+          >
+        </div>
+
+        <div class="footer-second-part">
+          <div>Follow us on</div>
+          <a href="https://www.instagram.com/winxclub/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/results?search_query=winx+club"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.facebook.com/WinxClub/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
